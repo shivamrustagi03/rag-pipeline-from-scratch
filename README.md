@@ -1,117 +1,139 @@
-📚 RAG Pipeline from Scratch (Python + FAISS)
+**Retrieval-Augmented Generation (RAG) Pipeline — Python**
 
-A minimal, modular Retrieval-Augmented Generation (RAG) pipeline built from scratch using Python and FAISS, focused on understanding how document retrieval and LLM-based generation work together under the hood.
+A from-scratch Retrieval-Augmented Generation (RAG) pipeline implemented in Python, designed to demonstrate core concepts such as document ingestion, text chunking, vector similarity search, context retrieval, and LLM-based response generation.
 
-This project avoids heavy abstractions and frameworks to clearly demonstrate the core mechanics of RAG systems.
+This project focuses on first-principles understanding of RAG systems, making it suitable for AI/ML interviews, GenAI portfolios, and production-ready learning.
 
-🧠 What is RAG?
+**Project Overview**
 
-Retrieval-Augmented Generation (RAG) enhances large language models by:
+Retrieval-Augmented Generation (RAG) is a technique that improves Large Language Models (LLMs) by grounding responses in external knowledge sources.
+This project implements an end-to-end RAG workflow without heavy abstractions, ensuring transparency and clarity of logic.
 
-Retrieving relevant information from custom documents
+**Key objectives:**
 
-Injecting that context into the prompt
+Reduce LLM hallucinations
 
-Generating grounded responses, reducing hallucinations
+Enable question-answering over custom documents
 
-This allows LLMs to answer questions using your own data, not just pre-training knowledge.
+Understand retrieval + generation integration
 
-🚀 What This Project Does
+Core Features
 
-✔ Loads documents from local files
-✔ Converts text into vector embeddings
-✔ Stores embeddings in a FAISS vector store
-✔ Performs semantic similarity search
-✔ Generates summarized, context-aware answers
+Document loading and preprocessing
 
-🏗️ Project Structure
+Text chunking for efficient retrieval
+
+Embedding generation for semantic representation
+
+Vector similarity search for relevant context retrieval
+
+Context-aware answer generation using LLMs
+
+Modular and extensible project structure
+
+RAG Pipeline Workflow
+
+Load documents from local storage
+
+Split documents into smaller text chunks
+
+Generate vector embeddings for each chunk
+
+Store embeddings in an in-memory vector index
+
+Perform semantic similarity search on user queries
+
+Inject retrieved context into LLM prompts
+
+Generate grounded, summarized responses
+
+**Project Structure**
 rag-pipeline-from-scratch/
 │
 ├── Project 1/
-│   ├── app.py                # Main pipeline entry point
+│   ├── app.py                # Main RAG pipeline execution
 │   ├── src/
-│   │   ├── data_loader.py    # Document loading & preprocessing
-│   │   ├── vectorstore.py    # FAISS vector store logic
+│   │   ├── data_loader.py    # Document ingestion & preprocessing
+│   │   ├── vectorstore.py    # Vector storage & similarity search
 │   │   ├── search.py         # Retrieval + generation logic
 │   │
-│   ├── data/                 # Input documents
+│   ├── data/                 # Source documents
 │
 ├── requirements.txt
 ├── pyproject.toml
 ├── README.md
 
-🔁 RAG Pipeline Flow
-
-Load documents from the data/ directory
-
-Split text into manageable chunks
-
-Generate embeddings for each chunk
-
-Store embeddings in a FAISS index
-
-Retrieve top-K relevant chunks for a query
-
-Generate a summarized response using retrieved context
-
-🛠️ Tech Stack
+**Technology Stack**
 
 Python 3.11+
 
-FAISS (vector similarity search)
+Vector embeddings
 
-LLM APIs (configurable)
+Semantic similarity search
 
-Modular, framework-agnostic design
+Large Language Models (LLMs)
 
-▶️ How to Run Locally
-1️⃣ Create a virtual environment
+Retrieval-Augmented Generation (RAG) architecture
+
+**How to Run Locally**
+Step 1: Create virtual environment
 python -m venv .venv
-.venv\Scripts\activate    # Windows
+.venv\Scripts\activate
 
-2️⃣ Install dependencies
+Step 2: Install dependencies
 pip install -r requirements.txt
 
-3️⃣ Run the pipeline
+Step 3: Execute the pipeline
 python app.py
 
-🧪 Example Query
+Example Usage
 query = "What is an attention mechanism?"
 
 
-Output:
+**Sample Output:**
 
-Summary: Attention mechanisms allow models to focus on the most relevant parts of the input sequence...
+Attention mechanisms allow models to focus on the most relevant parts of the input sequence...
 
-📌 Design Philosophy
+Design Principles
 
-Built from first principles
+Built using first-principles AI concepts
 
-No unnecessary abstractions
+Minimal dependencies and abstractions
 
-Easy to read, debug, and extend
+Readable, interview-friendly code
 
-Emphasis on understanding how RAG works internally
+Easy to extend with APIs, databases, or UI layers
 
-This makes the project ideal for learning, interviews, and portfolio demonstration.
+Potential Enhancements
 
-🔮 Possible Enhancements
+FAISS-based vector indexing for large-scale retrieval
 
-Add FastAPI endpoints (/ingest, /query)
+FastAPI integration for serving the RAG pipeline
 
-Experiment with chunk sizes and overlap
+Metadata-aware filtering
 
-Metadata-based filtering
+Hybrid retrieval (BM25 + vector search)
 
-Hybrid search (BM25 + vectors)
+UI using Streamlit or Gradio
 
-Simple UI using Streamlit or Gradio
+Dockerization for deployment
 
-👨‍💻 Author
+Why This Project Matters
+
+This project demonstrates practical understanding of modern GenAI systems, including:
+
+Retrieval pipelines
+
+Vector similarity search
+
+Prompt-context construction
+
+LLM grounding strategies
+
+It is designed to be resume-ready, interview-explainable, and production-extendable.
+
+**Author**
 
 Shivam Rustagi
-Building in public | AI • RAG • Agentic Systems
-
-⭐ Why This Project?
-
-This project was created to deeply understand Retrieval-Augmented Generation beyond tutorials, focusing on how retrieval, embeddings, and generation interact in real systems.
+AI • RAG • LLMs • Agentic Systems
+Building in public
