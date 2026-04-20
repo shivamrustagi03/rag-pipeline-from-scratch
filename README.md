@@ -56,27 +56,6 @@ Final Answer (Grounded)
 
 ---
 
-## 📁 Project Structure
-
-
-rag-pipeline-from-scratch/
-│
-├── Project 1/
-│   ├── app.py                # Main pipeline execution
-│   ├── src/
-│   │   ├── data_loader.py    # Data ingestion
-│   │   ├── vectorstore.py    # Vector DB + similarity search
-│   │   ├── search.py         # Retrieval + LLM logic
-│   │
-│   ├── data/                 # Input documents
-│
-├── requirements.txt
-├── pyproject.toml
-└── README.md
-
-
----
-
 ## 🛠️ Tech Stack
 
 - Python 3.11+  
