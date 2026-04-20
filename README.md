@@ -1,139 +1,100 @@
-**Retrieval-Augmented Generation (RAG) Pipeline — Python**
+Retrieval-Augmented Generation (RAG) Pipeline — Python
 
-A from-scratch Retrieval-Augmented Generation (RAG) pipeline implemented in Python, designed to demonstrate core concepts such as document ingestion, text chunking, vector similarity search, context retrieval, and LLM-based response generation.
+An end-to-end Retrieval-Augmented Generation (RAG) pipeline built from scratch in Python, designed to demonstrate a deep understanding of modern GenAI systems, including retrieval, embeddings, and LLM-based response generation.
 
-This project focuses on first-principles understanding of RAG systems, making it suitable for AI/ML interviews, GenAI portfolios, and production-ready learning.
+This project emphasizes clarity, modularity, and first-principles implementation, making it highly suitable for technical interviews, portfolios, and real-world extensions.
 
-**Project Overview**
+🚀 Project Overview
 
-Retrieval-Augmented Generation (RAG) is a technique that improves Large Language Models (LLMs) by grounding responses in external knowledge sources.
-This project implements an end-to-end RAG workflow without heavy abstractions, ensuring transparency and clarity of logic.
+Retrieval-Augmented Generation (RAG) enhances Large Language Models (LLMs) by grounding responses in external knowledge sources, improving factual accuracy and reducing hallucinations.
 
-**Key objectives:**
+This implementation showcases a complete RAG workflow, built with minimal abstractions to highlight the underlying mechanics.
 
-Reduce LLM hallucinations
+Key Outcomes:
 
-Enable question-answering over custom documents
-
-Understand retrieval + generation integration
-
-Core Features
-
-Document loading and preprocessing
-
-Text chunking for efficient retrieval
-
-Embedding generation for semantic representation
-
-Vector similarity search for relevant context retrieval
-
-Context-aware answer generation using LLMs
-
-Modular and extensible project structure
-
-RAG Pipeline Workflow
-
+Improves LLM response accuracy using external data
+Enables domain-specific question answering
+Demonstrates integration of retrieval and generation systems
+⚙️ Core Features
+Document ingestion and preprocessing
+Intelligent text chunking for efficient retrieval
+Embedding generation for semantic understanding
+Vector similarity search for context retrieval
+Context-aware response generation using LLMs
+Clean, modular, and extensible architecture
+🔄 RAG Pipeline Workflow
 Load documents from local storage
-
-Split documents into smaller text chunks
-
-Generate vector embeddings for each chunk
-
-Store embeddings in an in-memory vector index
-
+Split documents into smaller chunks
+Generate embeddings for each chunk
+Store embeddings in a vector index (in-memory)
 Perform semantic similarity search on user queries
-
-Inject retrieved context into LLM prompts
-
-Generate grounded, summarized responses
-
-**Project Structure**
+Retrieve relevant context
+Inject context into LLM prompts
+Generate grounded responses
+📁 Project Structure
 rag-pipeline-from-scratch/
 │
 ├── Project 1/
-│   ├── app.py                # Main RAG pipeline execution
+│   ├── app.py                # Entry point for RAG pipeline
 │   ├── src/
-│   │   ├── data_loader.py    # Document ingestion & preprocessing
-│   │   ├── vectorstore.py    # Vector storage & similarity search
-│   │   ├── search.py         # Retrieval + generation logic
+│   │   ├── data_loader.py   # Document ingestion & preprocessing
+│   │   ├── vectorstore.py   # Vector storage & similarity search
+│   │   ├── search.py        # Retrieval + generation logic
 │   │
-│   ├── data/                 # Source documents
+│   ├── data/                # Input documents
 │
 ├── requirements.txt
 ├── pyproject.toml
 ├── README.md
-
-**Technology Stack**
-
-Python 3.11+
-
-Vector embeddings
-
-Semantic similarity search
-
+🛠️ Technology Stack
+Python (3.11+)
+Vector Embeddings
+Semantic Similarity Search
 Large Language Models (LLMs)
-
-Retrieval-Augmented Generation (RAG) architecture
-
-**How to Run Locally**
-Step 1: Create virtual environment
+Retrieval-Augmented Generation (RAG)
+▶️ Getting Started
+1. Create Virtual Environment
 python -m venv .venv
 .venv\Scripts\activate
-
-Step 2: Install dependencies
+2. Install Dependencies
 pip install -r requirements.txt
-
-Step 3: Execute the pipeline
+3. Run the Application
 python app.py
+💡 Example
 
-Example Usage
+Input Query:
+
 query = "What is an attention mechanism?"
 
+Output:
 
-**Sample Output:**
-
-Attention mechanisms allow models to focus on the most relevant parts of the input sequence...
-
-Design Principles
-
+Attention mechanisms enable models to focus on the most relevant parts of an input sequence, improving performance in tasks such as translation and summarization.
+🧠 Design Philosophy
 Built using first-principles AI concepts
+Minimal reliance on heavy frameworks
+Clear, readable, and interview-friendly code
+Easily extendable for production use cases
+🔮 Future Enhancements
+FAISS-based vector indexing for scalability
+FastAPI integration for API deployment
+Metadata-based filtering
+Hybrid search (BM25 + vector search)
+UI with Streamlit or Gradio
+Docker-based deployment
+📌 Why This Project Stands Out
 
-Minimal dependencies and abstractions
+This project demonstrates practical expertise in:
 
-Readable, interview-friendly code
+Retrieval pipelines and semantic search
+Embedding-based similarity systems
+Prompt engineering and context injection
+LLM grounding techniques
 
-Easy to extend with APIs, databases, or UI layers
+It reflects the ability to build, explain, and extend real-world GenAI systems, making it highly relevant for AI/ML and Data Science roles.
 
-Potential Enhancements
-
-FAISS-based vector indexing for large-scale retrieval
-
-FastAPI integration for serving the RAG pipeline
-
-Metadata-aware filtering
-
-Hybrid retrieval (BM25 + vector search)
-
-UI using Streamlit or Gradio
-
-Dockerization for deployment
-
-Why This Project Matters
-
-This project demonstrates practical understanding of modern GenAI systems, including:
-
-Retrieval pipelines
-
-Vector similarity search
-
-Prompt-context construction
-
-LLM grounding strategies
-
-It is designed to be resume-ready, interview-explainable, and production-extendable.
-
-**Author**
+👤 Author
 
 Shivam Rustagi
 AI • RAG • LLMs • Agentic Systems
-Building in public
+
+Building practical, production-ready AI systems with a focus on real-world impact.
